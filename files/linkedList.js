@@ -62,6 +62,28 @@ class Node {
       }
       return this;
     }
+    /**
+   * Find a node in the linked list.
+   *
+   * @param isMatch
+   *  Function that returns `true` if the current node matches the search criteria
+   *
+   * @returns {Node|null}
+   *  The first node where `isMatch(node, index) === true`,
+   *  or `null` if no match is found
+   */
+  find(isMatch) {
+    let index = 0;
+    let node = this.head;
+    while (node) {
+      if (isMatch(node, index)) {
+        return node;
+      }
+      index++;
+      node = node.next;
+    }
+    return null;
+  }
   }
   
   module.exports = LinkedList;
