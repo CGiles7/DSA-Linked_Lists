@@ -19,3 +19,5 @@ console.log(
   "find 3",
   linkedList.find((node) => node.value === 3)
 );
+//to find a node by index only:
+console.log(linkedList.find((node, index) => index === 1));
